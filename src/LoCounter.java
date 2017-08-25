@@ -34,7 +34,7 @@ public class LoCounter {
 
    private static int numFiles = 0;
 
-   private static String[] extensions = {"java", "cpp", "hpp", "c", "h"};
+   private static String[] extensions = {"java", "cpp", "hpp", "c", "h", "glsl"};
 
    private static String exclude_dir = "";
 
@@ -238,7 +238,7 @@ public class LoCounter {
 
       int total = (numBlankLines + numCodeLines + numCommentLines);
 
-      double percentCode = ((double)numCodeLines / (double)total);
+      double percentCode = ((double)numCodeLines / (double)total) * 100;
 
       System.out.println("Blank: " + numBlankLines);
       System.out.println("Comments: " + numCommentLines);
